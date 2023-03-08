@@ -2,6 +2,7 @@
 export default {
     data() {
         return {
+            apiflags: "https://countryflagsapi.com/png/BR"
         }
     },
 
@@ -20,7 +21,7 @@ export default {
         <div class="poster">
             <img class="img-fluid" :src="'https://image.tmdb.org/t/p/w342' + imgpath" alt="">
         </div>
-        <span>{{ language }}</span>
+        <img src="" alt="">
         <h5>{{ title }}</h5>
         <span>{{ Math.floor(vote) }}</span>
     </div>

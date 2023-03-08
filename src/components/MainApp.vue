@@ -17,14 +17,15 @@ export default {
 <template>
     <main>
         <div class="container">
+            <h3 v-if="!store.movie.length">Inserisci titolo del contenuto</h3>
             <div class="row">
-                <h3>MOVIE</h3>
+                <h3 v-if="store.movie.length">MOVIE</h3>
                 <ContentApp v-for="content in store.movie" :imgpath="content.poster_path" :title="content.title"
                     :originaltitle="content.original_title" :vote="content.vote_average"
                     :language="content.original_language" />
             </div>
             <div class="row">
-                <h3>TV SHOW</h3>
+                <h3 v-if="store.movie.length">TV SHOW</h3>
                 <ContentApp v-for="content in store.tvshow" :imgpath="content.poster_path" :title="content.title"
                     :originaltitle="content.original_title" :vote="content.vote_average"
                     :language="content.original_language" />
