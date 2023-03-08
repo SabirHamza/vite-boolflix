@@ -18,18 +18,19 @@ export default {
     <main>
         <div class="container">
             <div class="row">
-                <div v-for="content in store.movie" class="col-2">
-                    <ContentApp :imgpath="content.backdrop_path" :title="content.title"
-                        :originaltitle="content.original_title" :vote="content.vote_average"
-                        :language="content.original_language" />
-                </div>
+                <h3>MOVIE</h3>
+                <ContentApp v-for="content in store.movie" :imgpath="content.poster_path" :title="content.title"
+                    :originaltitle="content.original_title" :vote="content.vote_average"
+                    :language="content.original_language" />
+            </div>
+            <div class="row">
+                <h3>TV SHOW</h3>
+                <ContentApp v-for="content in store.tvshow" :imgpath="content.poster_path" :title="content.title"
+                    :originaltitle="content.original_title" :vote="content.vote_average"
+                    :language="content.original_language" />
             </div>
         </div>
     </main>
 </template>
 
-<style lang="scss" scoped>
-main {
-    padding-top: 100px;
-}
-</style>
+<style lang="scss" scoped></style>

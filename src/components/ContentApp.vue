@@ -9,17 +9,16 @@ export default {
         imgpath: String,
         originaltitle: String,
         title: String,
-        vote: String,
+        vote: Number,
         language: String
     }
 }
 </script>
 
 <template>
-    <div>
+    <div class="col-2 py-2">
         <div class="poster">
-            <strong>BOOLFLIX</strong>
-            <img src="" alt="">
+            <img class="img-fluid" :src="'https://image.tmdb.org/t/p/w342' + imgpath" alt="">
         </div>
         <span>{{ language }}</span>
         <h5>{{ title }}</h5>
@@ -27,13 +26,4 @@ export default {
     </div>
 </template>
 
-<style lang="scss" scoped>
-.poster {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 200px;
-    color: midnightblue;
-    border: 5px solid midnightblue;
-}
-</style>
+<style lang="scss" scoped></style>

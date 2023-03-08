@@ -44,10 +44,4 @@ export default {
     </header>
 </template>
 
-<style lang="scss" scoped>
-header {
-    position: fixed;
-    width: 100%;
-    background-color: white;
-}
-</style>
+<style lang="scss" scoped></style>
